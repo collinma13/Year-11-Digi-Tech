@@ -21,7 +21,6 @@ function maoriMihi() {
 }
 
 function nonMaoriMihi() {
-
   let mountain = prompt('What is your mountain?')
   let water = prompt('What is your river/ocean/lake/bay-harbour?')
   let vessel = prompt('What is your vessel?')

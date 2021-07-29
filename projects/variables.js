@@ -42,6 +42,7 @@ function lessonsToSeconds () {
     alert('Error: Bad input.')
   }
 }
+
 function lifeRemaining () {
 let currentage = prompt('What is your current age?')
   let years = 82 - currentage 
