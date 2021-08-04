@@ -24,7 +24,7 @@ function gstCalculator () {
       alert('Error: Invalid price.')
       }
   } else {
-    alert('Error: Bad input.')
+    alert('Error: Bad input.') 
   }
 }
 
