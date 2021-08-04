@@ -12,7 +12,7 @@ const jobs = [
   function futureJob() {
     let index = 0
   
-    alert('Your future job will be' + jobs[5])
+    alert('Your future job will be ' + jobs[5])
   }
   
   let subjects = [
