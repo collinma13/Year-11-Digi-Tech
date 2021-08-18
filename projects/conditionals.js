@@ -57,18 +57,33 @@ if (typeof (userAge)== 'number') {
 } 
 
 function calculator () {
-  let firstNum = prompt ('Type a number?')
+  // get the first number
+let firstNum = prompt ('First number.')
+firstNum = Number(firstNum)
+  // get the second number
 let secondNum = prompt ('Type second number?')
-let operator = prompt ('What is the operator?')
+secondNum = Number(secondNum)
+  // get the operator
+let operator = prompt ('What operator?')
+
+  // if the operator is '+'
   if (operator == '+') {
-    alert (firstNum + secondNum)
+    // output the added result 
+alert (firstNum + secondNum)
+  // otherwise, if the operator is '-' 
   } else if (operator == '-') {
-    alert (firstNum - secondNum)
+    // output the subtracted result 
+alert (firstNum - secondNum)
+  // otherwise, if the operator is '*' 
   if (operator == '*') {
-    alert (firstNum * secondNum)
+    // output the multiplied result
+alert (firstNum * secondNum)
+  // otherwise, if the operator is '/'
   } else if (operator == '/')
+    // output the divided result
     alert (firstNum / secondNum)
-  }
+  // end if
+ }
 }
 
 function capital() {

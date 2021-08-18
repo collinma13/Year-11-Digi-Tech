@@ -12,9 +12,9 @@ const jobs = [
 ]
 
 function futureJob() {
-  let index = jobs[Math.floor(Math.random() * jobs.length)]
+  let index = 5
 
-  alert('Your future job will be ' + index)
+  alert('Your future job will be ' + jobs[index])
 }
 
 // ####################################
@@ -36,14 +36,23 @@ function addSubject() {
 
   alert(subjects)
 }
-
 function removeSubject() {
+  let index = prompt ('what subjects should be removed? 0-3')
+if (!isNaN(index)) {
+  // if the index is greater than negative 1, AND if the index is less than 4
+  if (index > -1 && index < 4) {
+    subjects.splice(index, 1)
+  } else {
+    alert('Error: Invalid age.')
+  }
+} else {
+  alert('Error: Bad input.')
+}
+
   let index = prompt('Remove a subject')
 
   // remove 1 subject at the index position of the subjects array
-  subjects.splice(index, 1)
-
-  alert(subjects)
+  
 }
 
 // #####################################
