@@ -24,35 +24,35 @@ function futureJob() {
 let subjects = [
   'English',
   'Digital Technology',
-  'Graphics',
   'Science',
+  'Graphics',
 ]
 
 function addSubject() {
-  let newSubject = prompt('Pick a subject')
+  let newSubject = prompt('Pick a subject.')
 
   // add a new subject to the end of the subjects array
   subjects.push(newSubject)
-
-  alert(subjects)
 }
+
 function removeSubject() {
-  let index = prompt ('what subjects should be removed? 0-3')
-if (!isNaN(index)) {
-  // if the index is greater than negative 1, AND if the index is less than 4
+  let index = prompt('What subject should be removed? 0-3')
+  
+  if (!isNaN(index)) {
+
   if (index > -1 && index < 4) {
+
     subjects.splice(index, 1)
+    
   } else {
-    alert('Error: Invalid age.')
+    alert('Error: Invalid number.')
   }
+  
 } else {
   alert('Error: Bad input.')
 }
-
-  let index = prompt('Remove a subject')
-
-  // remove 1 subject at the index position of the subjects array
   
+  // remove 1 subject at the index position of the subjects arry
 }
 
 // #####################################
@@ -68,13 +68,14 @@ let numberArray = [
 ]
 
 function numberSearch() {
-  let searchTarget = 2
+  let searchTarget = prompt('What number should be found.')
   let searchResult = false
-
-  numberArray.forEach((currentNumber) => {
-    if (currentNumber == searchTarget) {
-      searchResult = true
-    }
+  
+  numberArray.forEach( (currentNumber) => {
+    alert(currentNumber)
+    // if (currentNumber == searchTarget) {
+    //  searchResult = true
+    //}
   })
 }
 
@@ -89,11 +90,13 @@ let subject = {
 }
 
 function showSubject() {
-  alert(subject.name)
+  alert('The subject is ' + subject.name + ', it is in room ' + subject.room + ', and has ' + subject.students + ' students.')
 }
 
 function changeSubject() {
-  let newName = prompt()
+  let newName = prompt('What subject should DigiTech change to?')
+  let newRoom = prompt('What room is your suject in?')
+  let newStudent = prompt('How many students take your subject?')
   subject.name = newName
 }
 
@@ -102,20 +105,23 @@ function changeSubject() {
 // #####################################
 
 let petRegister = [
-  { name: 'Snuggles', type: 'cat', color: 'tabby' },
-  { name: 'Socks', type: 'cat', color: 'black and white' },
-  { name: 'Dogan', type: 'dog', color: 'brown' },
+  { name: 'Snuggles', type: 'Cat', color: 'Tabby', age: '3' },
+  { name: 'Socks', type: 'Cat', color: 'Black and white', age: '6' },
+  { name: 'Snoodle', type: 'Cat', color: 'Brown', age: '8' },
+  { name: 'Dogan', type: 'Dog', color: 'Brown', age: '2' },
+  { name: 'Bogan', type: 'Dog', color: 'Tabby', age: '10' },
 ]
 
 function petSearch() {
-  let searchType = prompt()
+  let searchType = prompt('what is your pet colour?')
   let searchResult = ''
 
-  petRegister.forEach((currentPet) => {
-    if (currentPet.type == searchType) {
-      searchResult += currentPet.name
+  petRegister.forEach( (currentPet) => {
+    if (currentPet.color == searchType) {
+      searchResult += currentPet.name + ', ' + currentPet.type + ', ' + currentPet.color + '. ' 
     }
   })
 
   alert(searchResult)
 }
+
